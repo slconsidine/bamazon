@@ -34,7 +34,7 @@ INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("bottled water", "Grocery", 1.00, 2000);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("Keurig", "Kitchen", 150.00, 175);
+VALUES ("Keurig", "Home Essentials", 150.00, 175);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("candle", "Home Essentials", 10.00, 120);
