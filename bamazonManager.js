@@ -13,8 +13,8 @@ var connection = mysql.createConnection({
 function viewProducts() {
     connection.query("SELECT * FROM products", function(err,results) {
         if (err) throw err;
+        console.log("Here is a list of all products: ")
         for (var i=0; i < results.length; i++) {
-            console.log("Here is a list of all products: ")
             console.log("ID number: " + results[i].id);
             console.log("Product: " + results[i].product_name);
             console.log("Department: " + results[i].department_name);
@@ -31,6 +31,7 @@ function viewLow() {
         if (err) throw err;
         for (var i=0; i < results.length; i++) {
             if (results[i].stock_quantity < 5) {
+                console.log(results[i].product_name + " products are low.");
                 console.log("ID number: " + results[i].id);
                 console.log("Product: " + results[i].product_name);
                 console.log("Department: " + results[i].department_name);
